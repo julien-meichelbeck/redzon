@@ -1,6 +1,8 @@
 {
   "presets": ["stage-1", ["env", {"modules": false}]],
   "plugins": [
+    "transform-react-jsx",
+    "transform-class-properties",
     ["module-resolver", {
       "root": ["./src"]
     }]
