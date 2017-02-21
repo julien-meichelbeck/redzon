@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import Text from 'material-ui/Text'
 import { CircularProgress } from 'material-ui/Progress'
-import nameFormatter from '../nameFormatter'
 import Results from './Results'
+import lookupOnReddit from '../lookupOnReddit'
 
 export default class Popup extends Component {
   componentWillMount() {
@@ -10,21 +10,7 @@ export default class Popup extends Component {
   }
 
   fetchResults = () => {
-    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-      const tab = tabs[0]
-      chrome.tabs.sendMessage(
-        tab.id,
-        { action: 'GET_TXT_IN_DOM', selector: '#productTitle' },
-        (productTitle) => {
-          const url = `https://www.reddit.com/search.json?q=${nameFormatter(productTitle)}`
-          fetch(url)
-            .then((res) => res.json())
-            .then(({ data: { children } }) => {
-              this.setState({ results: children })
-            })
-        },
-      )
-    })
+    lookupOnReddit((results) => this.setState({ results: (results || []).concat(results) }))
   }
 
   render() {

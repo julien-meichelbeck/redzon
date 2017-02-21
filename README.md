@@ -1,1 +1,1 @@
-# Bootstrap chrome extension
+# Amazon/Reddit

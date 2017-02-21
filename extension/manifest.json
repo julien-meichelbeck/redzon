@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
-  "name": "TODO",
-  "description": "TODO",
+  "name": "Amazon/Reddit",
+  "description": "Amazon/Reddit",
   "minimum_chrome_version": "54",
   "version": "1.0.0",
   "browser_action": {

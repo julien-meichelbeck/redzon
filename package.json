@@ -13,12 +13,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/julien-meichelbeck/bootstrap-chrome-extension.git"
+    "url": "git+https://github.com/julien-meichelbeck/amazon-reddit.git"
   },
   "bugs": {
-    "url": "https://github.com/julien-meichelbeck/bootstrap-chrome-extension/issues"
+    "url": "https://github.com/julien-meichelbeck/amazon-reddit/issues"
   },
-  "homepage": "https://github.com/julien-meichelbeck/bootstrap-chrome-extension#readme",
+  "homepage": "https://github.com/julien-meichelbeck/amazon-reddit#readme",
   "devDependencies": {
     "babel-core": "^6.23.1",
     "babel-eslint": "^7.1.1",
