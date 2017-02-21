@@ -1,0 +1,8 @@
+{
+  "presets": ["stage-1", ["env", {"modules": false}]],
+  "plugins": [
+    ["module-resolver", {
+      "root": ["./src"]
+    }]
+  ]
+}

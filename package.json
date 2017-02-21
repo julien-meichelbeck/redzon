@@ -1,0 +1,46 @@
+{
+  "name": "zipper",
+  "private": true,
+  "version": "1.0.0",
+  "description": "TODO",
+  "main": "extension/main.js",
+  "scripts": {
+    "test": "npm run lint && npm run unit",
+    "webpack": "webpack --watch --progress",
+    "unit": "mocha",
+    "watch": "mocha -w",
+    "lint": "eslint --max-warnings 9 --cache ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/julien-meichelbeck/bootstrap-chrome-extension.git"
+  },
+  "bugs": {
+    "url": "https://github.com/julien-meichelbeck/bootstrap-chrome-extension/issues"
+  },
+  "homepage": "https://github.com/julien-meichelbeck/bootstrap-chrome-extension#readme",
+  "devDependencies": {
+    "babel-core": "^6.23.1",
+    "babel-eslint": "^7.1.1",
+    "babel-loader": "^6.3.2",
+    "babel-plugin-module-resolver": "^2.5.0",
+    "babel-preset-env": "^1.1.8",
+    "babel-preset-stage-1": "^6.22.0",
+    "chai": "^3.5.0",
+    "eslint": "^3.15.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-babel": "^4.0.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-mocha": "^4.8.0",
+    "eslint-plugin-react": "^6.10.0",
+    "jsdom": "^9.11.0",
+    "mocha": "^3.2.0",
+    "raven-js": "^3.11.0",
+    "sinon": "^1.17.7",
+    "webpack": "^2.2.1"
+  },
+  "dependencies": {
+    "jquery": "^3.1.1"
+  }
+}
