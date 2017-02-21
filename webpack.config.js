@@ -5,7 +5,8 @@ const production = process.env.NODE_ENV === 'production'
 
 module.exports = {
   entry: {
-    main: path.join(__dirname, 'src/main.js'),
+    content_script: path.join(__dirname, 'src/content_script.js'),
+    popup: path.join(__dirname, 'src/popup.js'),
   },
   output: {
     path: path.join(__dirname, 'extension'),

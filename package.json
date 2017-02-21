@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "description": "TODO",
-  "main": "extension/main.js",
+  "main": "extension/popup.js",
   "scripts": {
     "test": "npm run lint && npm run unit",
     "webpack": "webpack --watch --progress",

@@ -1,7 +1,12 @@
 {
   "extends": "airbnb",
   "parser": "babel-eslint",
+  "env": {
+     "browser": true,
+     "node": true
+   },
   "rules": {
+    "no-console": "off",
     "react/jsx-filename-extension": "off",
     "arrow-parens": "off",
     "max-len":
@@ -68,10 +73,6 @@
     "semi": ["error", "never"]
   },
   "globals": {
-    "window": true,
-    "document": true,
-    "google": true,
-    "chrome": true,
-    "MutationObserver": true
+    "chrome": true
   }
 }
