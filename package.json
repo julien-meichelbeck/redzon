@@ -1,12 +1,12 @@
 {
-  "name": "zipper",
+  "name": "AmazonReddit",
   "private": true,
   "version": "1.0.0",
   "description": "TODO",
   "main": "extension/popup.js",
   "scripts": {
     "test": "npm run lint && npm run unit",
-    "webpack": "webpack --watch --progress",
+    "dev": "webpack --watch --progress",
     "unit": "mocha",
     "watch": "mocha -w",
     "lint": "eslint --max-warnings 9 --cache ."

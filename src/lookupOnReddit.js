@@ -7,7 +7,7 @@ const REDDIT_QUESTIONS = [
   // (name) => `underrated ${name}`,
 ]
 
-const search = (addResults) => (productTitle) => {
+export default (productTitle, addResults) => {
   const productName = nameFormatter(productTitle)
   REDDIT_QUESTIONS.forEach((keywordBuilder) => {
     const url = `https://www.reddit.com/r/movies/search.json?q=${encodeURIComponent(keywordBuilder(productName))}&restrict_sr=t`
@@ -16,16 +16,5 @@ const search = (addResults) => (productTitle) => {
       .then(({ data: { children } }) => {
         addResults(children)
       })
-  })
-}
-
-export default (setResults) => {
-  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-    const tab = tabs[0]
-    chrome.tabs.sendMessage(
-      tab.id,
-      { action: 'GET_TXT_IN_DOM', selector: '#productTitle' },
-      search(setResults),
-    )
   })
 }
