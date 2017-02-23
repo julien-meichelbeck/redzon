@@ -4,7 +4,7 @@ import { CircularProgress } from 'material-ui/Progress'
 import Results from './Results'
 import NoProduct from './NoProduct'
 import lookupOnReddit from '../lookupOnReddit'
-import getProductName from '../getProductName'
+import getProductInfo from '../getProductInfo'
 
 export default class Popup extends Component {
   state = {
@@ -18,10 +18,11 @@ export default class Popup extends Component {
   }
 
   fetchResults = () => {
-    getProductName({
-      onSuccess: (productName) => (
+    getProductInfo({
+      onSuccess: (productName, productCategory) => (
         lookupOnReddit(
           productName,
+          productCategory,
           (results) => this.setState({ results: results.concat(results), fetched: true }),
         )
       ),

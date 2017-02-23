@@ -3,10 +3,10 @@ export default ({ onSuccess, onFailure }) => {
     const tab = tabs[0]
     chrome.tabs.sendMessage(
       tab.id,
-      { action: 'GET_TXT_IN_DOM', selector: '#productTitle' },
-      (productName) => (
+      { action: 'GET_TXT_IN_DOM', selectors: ['#productTitle', '#nav-subnav .nav-a-content:first'] },
+      ([productName, productCategory]) => (
         productName
-          ? onSuccess(productName)
+          ? onSuccess(productName, productCategory)
           : onFailure()
       ),
     )
