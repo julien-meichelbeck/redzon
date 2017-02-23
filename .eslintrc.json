@@ -7,6 +7,8 @@
    },
   "rules": {
     "no-console": "off",
+    "react/prop-types": "off",
+    "react/no-danger": "off",
     "react/jsx-filename-extension": "off",
     "react/prefer-stateless-function": "off",
     "arrow-parens": "off",

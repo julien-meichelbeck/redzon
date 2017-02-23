@@ -11,7 +11,7 @@ const REDDIT_QUESTIONS = [
 
 const SUBREDDIT_MAPPING = {
   Livres: '/r/books',
-  'Movie & TV': '/r/movies',
+  'Movies & TV': '/r/movies',
 }
 
 export default (productTitle, productCategory, addResults) => {
@@ -19,7 +19,7 @@ export default (productTitle, productCategory, addResults) => {
   let subreddit = ''
   let params = ''
   if (productCategory) {
-    subreddit = SUBREDDIT_MAPPING[productCategory]
+    subreddit = SUBREDDIT_MAPPING[productCategory] || ''
   }
   if (subreddit) {
     params = '&restrict_sr=t'
