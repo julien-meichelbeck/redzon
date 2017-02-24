@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Text from 'material-ui/Text'
 import { CircularProgress } from 'material-ui/Progress'
 import Results from './Results'
-import NoProduct from './NoProduct'
+import Message from './Message'
 import lookupOnReddit from '../lookupOnReddit'
 import getProductInfo from '../getProductInfo'
 
@@ -34,16 +34,36 @@ export default class Popup extends Component {
     const results = this.state && this.state.results
     return (
       <div>
-        <Text colorInherit type="title" align="center">Amazon + Reddit = 🚀</Text>
+        <div style={{ textAlign: 'center', position: 'relative', top: '10px', marginBottom: '30px' }}>
+          <img
+            style={{ width: '50px', display: 'inline-block' }}
+            src="./logo.png"
+          />
+          <Text
+            colorInherit
+            type="title"
+            align="center"
+            style={{
+              fontFamily: "'Poiret One', cursive",
+              fontSize: '50px',
+              color: '#ff5252',
+              display: 'inline-block',
+            }}
+          >
+            redzon
+          </Text>
+        </div>
         {
           this.state && this.state.noProductName
-            ? <NoProduct />
+            ? <Message>You must be on an Amazon product page to use this extension.</Message>
             :
             <div>
               {
                 this.state && this.state.fetched
                   ? <Results results={results} />
-                  : <div style={{ textAlign: 'center', marginTop: '50px' }}><CircularProgress size={100} /></div>
+                  : <div style={{ textAlign: 'center', marginTop: '50px' }}>
+                    <CircularProgress size={100} />
+                  </div>
               }
             </div>
         }

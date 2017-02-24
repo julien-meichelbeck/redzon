@@ -6,11 +6,13 @@ import {
 import Text from 'material-ui/Text'
 
 
-export default () => (
+export default ({
+  children,
+}) => (
   <Card style={{ marginTop: '14px' }}>
     <CardContent>
       <Text type="subheading" align="center">
-        You must be on an Amazon product page to use this extension.
+        { children }
       </Text>
     </CardContent>
   </Card>

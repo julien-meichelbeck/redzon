@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
-  "name": "Amazon/Reddit",
-  "description": "Amazon/Reddit",
+  "name": "redzon",
+  "description": "redzon",
   "minimum_chrome_version": "54",
   "version": "1.0.0",
   "browser_action": {

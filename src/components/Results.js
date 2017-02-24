@@ -10,6 +10,7 @@ import Button from 'material-ui/Button'
 import IconButton from 'material-ui/IconButton'
 import Avatar from 'material-ui/Avatar'
 import marked from 'marked'
+import Message from './Message'
 
 const openThread = (url) => {
   chrome.tabs.create({ url })
@@ -20,11 +21,13 @@ export default ({
 }) => (
   <div>
     {
-      results.map(({ data: { id, domain, selftext, url, title } }) => (
+      !results.length
+      ? <Message>{"Sorry, We couldn't find anything on reddit about this product."}</Message>
+      : results.map(({ data: { id, domain, selftext, url, title } }) => (
         <Card key={id} style={{ marginTop: '14px' }}>
           <CardContent>
             <CardHeader
-              avatar={<Avatar>{title[0]}</Avatar>}
+              avatar={<Avatar style={{ backgroundColor: '#ff5252' }}>{title[0]}</Avatar>}
               title={title}
               subhead={domain}
             />
