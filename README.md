@@ -2,6 +2,6 @@
 
 # Redzon
 
-Chrome extension that displays reddit comments and opinions on Amazon product pages. Edit
+Chrome extension that displays reddit comments and opinions on Amazon product pages.
 
 Stack: Material UI + React + Webpack
